@@ -1,0 +1,44 @@
+F:\C#\Pixel Program\bin\Debug\Pixel Program.exe.config
+F:\C#\Pixel Program\bin\Debug\Pixel Program.exe
+F:\C#\Pixel Program\bin\Debug\Pixel Program.pdb
+F:\C#\Pixel Program\bin\Debug\BouncyCastle.Cryptography.dll
+F:\C#\Pixel Program\bin\Debug\Google.Protobuf.dll
+F:\C#\Pixel Program\bin\Debug\K4os.Compression.LZ4.dll
+F:\C#\Pixel Program\bin\Debug\K4os.Compression.LZ4.Streams.dll
+F:\C#\Pixel Program\bin\Debug\K4os.Hash.xxHash.dll
+F:\C#\Pixel Program\bin\Debug\Microsoft.Bcl.AsyncInterfaces.dll
+F:\C#\Pixel Program\bin\Debug\MySql.Data.dll
+F:\C#\Pixel Program\bin\Debug\System.Buffers.dll
+F:\C#\Pixel Program\bin\Debug\System.Configuration.ConfigurationManager.dll
+F:\C#\Pixel Program\bin\Debug\System.Diagnostics.DiagnosticSource.dll
+F:\C#\Pixel Program\bin\Debug\System.IO.Pipelines.dll
+F:\C#\Pixel Program\bin\Debug\System.Memory.dll
+F:\C#\Pixel Program\bin\Debug\System.Numerics.Vectors.dll
+F:\C#\Pixel Program\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+F:\C#\Pixel Program\bin\Debug\System.Threading.Tasks.Extensions.dll
+F:\C#\Pixel Program\bin\Debug\ZstdSharp.dll
+F:\C#\Pixel Program\bin\Debug\BouncyCastle.Cryptography.xml
+F:\C#\Pixel Program\bin\Debug\Google.Protobuf.pdb
+F:\C#\Pixel Program\bin\Debug\Google.Protobuf.xml
+F:\C#\Pixel Program\bin\Debug\K4os.Compression.LZ4.xml
+F:\C#\Pixel Program\bin\Debug\K4os.Compression.LZ4.Streams.xml
+F:\C#\Pixel Program\bin\Debug\K4os.Hash.xxHash.xml
+F:\C#\Pixel Program\bin\Debug\Microsoft.Bcl.AsyncInterfaces.xml
+F:\C#\Pixel Program\bin\Debug\MySql.Data.xml
+F:\C#\Pixel Program\bin\Debug\System.Buffers.xml
+F:\C#\Pixel Program\bin\Debug\System.Diagnostics.DiagnosticSource.xml
+F:\C#\Pixel Program\bin\Debug\System.IO.Pipelines.xml
+F:\C#\Pixel Program\bin\Debug\System.Memory.xml
+F:\C#\Pixel Program\bin\Debug\System.Numerics.Vectors.xml
+F:\C#\Pixel Program\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+F:\C#\Pixel Program\bin\Debug\System.Threading.Tasks.Extensions.xml
+F:\C#\Pixel Program\obj\Debug\Pixel Program.csproj.AssemblyReference.cache
+F:\C#\Pixel Program\obj\Debug\Pixel_Program.FrmGastos.resources
+F:\C#\Pixel Program\obj\Debug\Pixel_Program.Properties.Resources.resources
+F:\C#\Pixel Program\obj\Debug\Pixel Program.csproj.GenerateResource.cache
+F:\C#\Pixel Program\obj\Debug\Pixel Program.csproj.CoreCompileInputs.cache
+F:\C#\Pixel Program\obj\Debug\Pixel Program.csproj.CopyComplete
+F:\C#\Pixel Program\obj\Debug\Pixel Program.exe
+F:\C#\Pixel Program\obj\Debug\Pixel Program.pdb
+F:\C#\Pixel Program\obj\Debug\Pixel_Program.FrmIngresos.resources
+F:\C#\Pixel Program\obj\Debug\Pixel_Program.FrmPrincipal.resources
