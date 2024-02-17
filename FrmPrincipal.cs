@@ -62,5 +62,43 @@ namespace Pixel_Program
             // Se ha soltado el botón del mouse, por lo que el formulario ya no se moverá
             mousePresionado = false;
         }
+
+        private void btnInventario_Click(object sender, EventArgs e)
+        {
+            FrmInventario formularioInventario = new FrmInventario();
+            formularioInventario.Show();
+            Hide();
+        }
+
+        private void btnVentas_Click(object sender, EventArgs e)
+        {
+            FrmVenta formularioVenta = new FrmVenta();
+            formularioVenta.Show();
+            Hide();
+        }
+
+        private void btnCerrar_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void btnMinimizar_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void btnReportes_Click(object sender, EventArgs e)
+        {
+            FrmReportes formularioReportes = new FrmReportes();
+            formularioReportes.Show();
+            Hide();
+        }
+
+        private void btnPedidos_Click(object sender, EventArgs e)
+        {
+            FrmPedidos formularioPedidos = new FrmPedidos();
+            formularioPedidos.Show();
+            Hide();
+        }
     }
 }

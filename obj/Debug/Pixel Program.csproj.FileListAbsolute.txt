@@ -42,3 +42,55 @@ F:\C#\Pixel Program\obj\Debug\Pixel Program.exe
 F:\C#\Pixel Program\obj\Debug\Pixel Program.pdb
 F:\C#\Pixel Program\obj\Debug\Pixel_Program.FrmIngresos.resources
 F:\C#\Pixel Program\obj\Debug\Pixel_Program.FrmPrincipal.resources
+F:\Git\PixelProgram\bin\Debug\Pixel Program.exe.config
+F:\Git\PixelProgram\bin\Debug\Pixel Program.exe
+F:\Git\PixelProgram\bin\Debug\Pixel Program.pdb
+F:\Git\PixelProgram\bin\Debug\BouncyCastle.Cryptography.dll
+F:\Git\PixelProgram\bin\Debug\Google.Protobuf.dll
+F:\Git\PixelProgram\bin\Debug\K4os.Compression.LZ4.dll
+F:\Git\PixelProgram\bin\Debug\K4os.Compression.LZ4.Streams.dll
+F:\Git\PixelProgram\bin\Debug\K4os.Hash.xxHash.dll
+F:\Git\PixelProgram\bin\Debug\Microsoft.Bcl.AsyncInterfaces.dll
+F:\Git\PixelProgram\bin\Debug\MySql.Data.dll
+F:\Git\PixelProgram\bin\Debug\System.Buffers.dll
+F:\Git\PixelProgram\bin\Debug\System.Configuration.ConfigurationManager.dll
+F:\Git\PixelProgram\bin\Debug\System.Diagnostics.DiagnosticSource.dll
+F:\Git\PixelProgram\bin\Debug\System.IO.Pipelines.dll
+F:\Git\PixelProgram\bin\Debug\System.Memory.dll
+F:\Git\PixelProgram\bin\Debug\System.Numerics.Vectors.dll
+F:\Git\PixelProgram\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+F:\Git\PixelProgram\bin\Debug\System.Threading.Tasks.Extensions.dll
+F:\Git\PixelProgram\bin\Debug\ZstdSharp.dll
+F:\Git\PixelProgram\bin\Debug\BouncyCastle.Cryptography.xml
+F:\Git\PixelProgram\bin\Debug\Google.Protobuf.pdb
+F:\Git\PixelProgram\bin\Debug\Google.Protobuf.xml
+F:\Git\PixelProgram\bin\Debug\K4os.Compression.LZ4.xml
+F:\Git\PixelProgram\bin\Debug\K4os.Compression.LZ4.Streams.xml
+F:\Git\PixelProgram\bin\Debug\K4os.Hash.xxHash.xml
+F:\Git\PixelProgram\bin\Debug\Microsoft.Bcl.AsyncInterfaces.xml
+F:\Git\PixelProgram\bin\Debug\MySql.Data.xml
+F:\Git\PixelProgram\bin\Debug\System.Buffers.xml
+F:\Git\PixelProgram\bin\Debug\System.Diagnostics.DiagnosticSource.xml
+F:\Git\PixelProgram\bin\Debug\System.IO.Pipelines.xml
+F:\Git\PixelProgram\bin\Debug\System.Memory.xml
+F:\Git\PixelProgram\bin\Debug\System.Numerics.Vectors.xml
+F:\Git\PixelProgram\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+F:\Git\PixelProgram\bin\Debug\System.Threading.Tasks.Extensions.xml
+F:\Git\PixelProgram\obj\Debug\Pixel Program.csproj.AssemblyReference.cache
+F:\Git\PixelProgram\obj\Debug\Pixel_Program.FrmGastos.resources
+F:\Git\PixelProgram\obj\Debug\Pixel_Program.FrmIngresos.resources
+F:\Git\PixelProgram\obj\Debug\Pixel_Program.FrmPrincipal.resources
+F:\Git\PixelProgram\obj\Debug\Pixel_Program.Properties.Resources.resources
+F:\Git\PixelProgram\obj\Debug\Pixel Program.csproj.GenerateResource.cache
+F:\Git\PixelProgram\obj\Debug\Pixel Program.csproj.CoreCompileInputs.cache
+F:\Git\PixelProgram\obj\Debug\Pixel Program.csproj.CopyComplete
+F:\Git\PixelProgram\obj\Debug\Pixel Program.exe
+F:\Git\PixelProgram\obj\Debug\Pixel Program.pdb
+F:\Git\PixelProgram\obj\Debug\Pixel_Program.FrmInventario.resources
+F:\Git\PixelProgram\obj\Debug\Pixel_Program.FrmVenta.resources
+F:\Git\PixelProgram\obj\Debug\Pixel_Program.FrmReportes.resources
+F:\Git\PixelProgram\bin\Debug\Pixel Program.exe.manifest
+F:\Git\PixelProgram\bin\Debug\Pixel Program.application
+F:\Git\PixelProgram\obj\Debug\Pixel Program.exe.manifest
+F:\Git\PixelProgram\obj\Debug\Pixel Program.application
+F:\Git\PixelProgram\obj\Debug\Pixel_Program.FrmPedidos.resources

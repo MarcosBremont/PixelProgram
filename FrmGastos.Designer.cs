@@ -40,28 +40,34 @@ namespace Pixel_Program
             this.txtFecha = new System.Windows.Forms.TextBox();
             this.btnEliminar = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.btnMinimizar = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
+            this.btnVolverAtras = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewGastos)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // txtDescripcion
             // 
-            this.txtDescripcion.Location = new System.Drawing.Point(99, 19);
+            this.txtDescripcion.Location = new System.Drawing.Point(84, 64);
             this.txtDescripcion.Name = "txtDescripcion";
             this.txtDescripcion.Size = new System.Drawing.Size(219, 20);
             this.txtDescripcion.TabIndex = 0;
             // 
             // txtMonto
             // 
-            this.txtMonto.Location = new System.Drawing.Point(364, 19);
+            this.txtMonto.Location = new System.Drawing.Point(349, 64);
             this.txtMonto.Name = "txtMonto";
             this.txtMonto.Size = new System.Drawing.Size(129, 20);
             this.txtMonto.TabIndex = 1;
+            this.txtMonto.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtMonto_KeyPress);
             // 
             // lblDescripcion
             // 
             this.lblDescripcion.AutoSize = true;
             this.lblDescripcion.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDescripcion.Location = new System.Drawing.Point(24, 23);
+            this.lblDescripcion.Location = new System.Drawing.Point(9, 68);
             this.lblDescripcion.Name = "lblDescripcion";
             this.lblDescripcion.Size = new System.Drawing.Size(74, 13);
             this.lblDescripcion.TabIndex = 2;
@@ -71,7 +77,7 @@ namespace Pixel_Program
             // 
             this.lblMonto.AutoSize = true;
             this.lblMonto.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMonto.Location = new System.Drawing.Point(318, 23);
+            this.lblMonto.Location = new System.Drawing.Point(303, 68);
             this.lblMonto.Name = "lblMonto";
             this.lblMonto.Size = new System.Drawing.Size(42, 13);
             this.lblMonto.TabIndex = 3;
@@ -79,16 +85,19 @@ namespace Pixel_Program
             // 
             // button1
             // 
+            this.button1.BackColor = System.Drawing.Color.DarkOliveGreen;
             this.button1.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.button1.FlatAppearance.BorderSize = 0;
             this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DimGray;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(12, 390);
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Location = new System.Drawing.Point(12, 380);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(130, 23);
+            this.button1.Size = new System.Drawing.Size(130, 33);
             this.button1.TabIndex = 4;
             this.button1.Text = "Agregar Gasto";
-            this.button1.UseVisualStyleBackColor = true;
+            this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.btnAgregarGasto_Click);
             // 
             // dataGridViewGastos
@@ -99,7 +108,7 @@ namespace Pixel_Program
             this.dataGridViewGastos.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridViewGastos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewGastos.ColumnHeadersVisible = false;
-            this.dataGridViewGastos.Location = new System.Drawing.Point(12, 81);
+            this.dataGridViewGastos.Location = new System.Drawing.Point(12, 108);
             this.dataGridViewGastos.Name = "dataGridViewGastos";
             this.dataGridViewGastos.RowHeadersVisible = false;
             this.dataGridViewGastos.Size = new System.Drawing.Size(776, 210);
@@ -118,49 +127,110 @@ namespace Pixel_Program
             // 
             // btnActualizarGastos
             // 
+            this.btnActualizarGastos.BackColor = System.Drawing.Color.DarkOliveGreen;
             this.btnActualizarGastos.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btnActualizarGastos.FlatAppearance.BorderSize = 0;
             this.btnActualizarGastos.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DimGray;
             this.btnActualizarGastos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnActualizarGastos.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnActualizarGastos.Location = new System.Drawing.Point(159, 390);
+            this.btnActualizarGastos.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnActualizarGastos.ForeColor = System.Drawing.Color.White;
+            this.btnActualizarGastos.Location = new System.Drawing.Point(159, 380);
             this.btnActualizarGastos.Name = "btnActualizarGastos";
-            this.btnActualizarGastos.Size = new System.Drawing.Size(130, 23);
+            this.btnActualizarGastos.Size = new System.Drawing.Size(130, 33);
             this.btnActualizarGastos.TabIndex = 7;
             this.btnActualizarGastos.Text = "Actualizar Gasto";
-            this.btnActualizarGastos.UseVisualStyleBackColor = true;
+            this.btnActualizarGastos.UseVisualStyleBackColor = false;
             this.btnActualizarGastos.Click += new System.EventHandler(this.btnActualizarGastos_Click);
             // 
             // txtFecha
             // 
             this.txtFecha.Enabled = false;
-            this.txtFecha.Location = new System.Drawing.Point(546, 19);
+            this.txtFecha.Location = new System.Drawing.Point(531, 64);
             this.txtFecha.Name = "txtFecha";
             this.txtFecha.Size = new System.Drawing.Size(170, 20);
             this.txtFecha.TabIndex = 8;
             // 
             // btnEliminar
             // 
+            this.btnEliminar.BackColor = System.Drawing.Color.DarkOliveGreen;
             this.btnEliminar.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btnEliminar.FlatAppearance.BorderSize = 0;
             this.btnEliminar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DimGray;
             this.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEliminar.Location = new System.Drawing.Point(304, 390);
+            this.btnEliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEliminar.ForeColor = System.Drawing.Color.White;
+            this.btnEliminar.Location = new System.Drawing.Point(304, 380);
             this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(130, 23);
+            this.btnEliminar.Size = new System.Drawing.Size(130, 33);
             this.btnEliminar.TabIndex = 9;
             this.btnEliminar.Text = "Eliminar Gasto";
-            this.btnEliminar.UseVisualStyleBackColor = true;
+            this.btnEliminar.UseVisualStyleBackColor = false;
             this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(501, 23);
+            this.label1.Location = new System.Drawing.Point(486, 68);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(42, 13);
             this.label1.TabIndex = 10;
             this.label1.Text = "Fecha";
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(103)))), ((int)(((byte)(192)))));
+            this.panel1.Controls.Add(this.btnMinimizar);
+            this.panel1.Controls.Add(this.label3);
+            this.panel1.Location = new System.Drawing.Point(-29, -1);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(886, 30);
+            this.panel1.TabIndex = 31;
+            // 
+            // btnMinimizar
+            // 
+            this.btnMinimizar.BackColor = System.Drawing.Color.DimGray;
+            this.btnMinimizar.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btnMinimizar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DimGray;
+            this.btnMinimizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMinimizar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMinimizar.ForeColor = System.Drawing.Color.White;
+            this.btnMinimizar.Location = new System.Drawing.Point(802, 0);
+            this.btnMinimizar.Name = "btnMinimizar";
+            this.btnMinimizar.Size = new System.Drawing.Size(27, 27);
+            this.btnMinimizar.TabIndex = 48;
+            this.btnMinimizar.Text = "-";
+            this.btnMinimizar.UseVisualStyleBackColor = false;
+            this.btnMinimizar.Click += new System.EventHandler(this.btnMinimizar_Click);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(372, 5);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(82, 20);
+            this.label3.TabIndex = 31;
+            this.label3.Text = "GASTOS";
+            // 
+            // btnVolverAtras
+            // 
+            this.btnVolverAtras.BackColor = System.Drawing.Color.Firebrick;
+            this.btnVolverAtras.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btnVolverAtras.FlatAppearance.BorderSize = 0;
+            this.btnVolverAtras.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DimGray;
+            this.btnVolverAtras.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnVolverAtras.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnVolverAtras.ForeColor = System.Drawing.Color.White;
+            this.btnVolverAtras.Location = new System.Drawing.Point(620, 375);
+            this.btnVolverAtras.Name = "btnVolverAtras";
+            this.btnVolverAtras.Size = new System.Drawing.Size(155, 38);
+            this.btnVolverAtras.TabIndex = 47;
+            this.btnVolverAtras.Text = "Volver Atras";
+            this.btnVolverAtras.UseVisualStyleBackColor = false;
+            this.btnVolverAtras.Click += new System.EventHandler(this.btnVolverAtras_Click);
             // 
             // FrmGastos
             // 
@@ -168,6 +238,8 @@ namespace Pixel_Program
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnVolverAtras);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.txtFecha);
@@ -181,11 +253,15 @@ namespace Pixel_Program
             this.Controls.Add(this.txtDescripcion);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FrmGastos";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmGastos";
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.FrmGastos_MouseDown);
             this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.FrmGastos_MouseMove);
             this.MouseUp += new System.Windows.Forms.MouseEventHandler(this.FrmGastos_MouseUp);
+            this.Validating += new System.ComponentModel.CancelEventHandler(this.FrmGastos_Validating);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewGastos)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -204,6 +280,10 @@ namespace Pixel_Program
         private System.Windows.Forms.TextBox txtFecha;
         private System.Windows.Forms.Button btnEliminar;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Button btnVolverAtras;
+        private System.Windows.Forms.Button btnMinimizar;
     }
 }
 

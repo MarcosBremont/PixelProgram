@@ -39,8 +39,25 @@ namespace Pixel_Program
 
         private void btnAgregarGasto_Click(object sender, EventArgs e)
         {
+            // Verifica si los campos obligatorios están llenos
+            if (!CamposValidos())
+            {
+                MessageBox.Show("Todos los campos son obligatorios. Por favor, llene todos los campos.");
+                return;
+            }
+
+            // Si todos los campos están llenos, procede con la inserción del gasto
             string descripcion = txtDescripcion.Text;
-            decimal monto = decimal.Parse(txtMonto.Text); // Asegúrate de manejar excepciones si el usuario ingresa un valor no válido
+            decimal monto;
+
+            // Verifica si el valor en el campo de monto es válido
+            if (!decimal.TryParse(txtMonto.Text, out monto))
+            {
+                MessageBox.Show("Ingrese un monto válido.");
+                return;
+            }
+
+            // Asegúrate de manejar excepciones si el usuario ingresa un valor no válido
             DateTime fecha = DateTime.Now; // Puedes obtener la fecha actual o usar un control de fecha en tu formulario
 
             gestionBaseDatos.InsertarGasto(descripcion, monto, fecha);
@@ -48,12 +65,31 @@ namespace Pixel_Program
             CargarGastos();
             MessageBox.Show("Gasto agregado correctamente.");
 
-
             // Limpia los campos después de agregar el gasto
             txtDescripcion.Clear();
             txtMonto.Clear();
-
         }
+
+        // Método para verificar si todos los campos obligatorios están llenos
+        private bool CamposValidos()
+        {
+            if (string.IsNullOrWhiteSpace(txtDescripcion.Text) || string.IsNullOrWhiteSpace(txtMonto.Text))
+            {
+                return false; // Retorna falso si alguno de los campos obligatorios está vacío
+            }
+
+            // Verifica si el campo txtMonto contiene solo números
+            decimal monto;
+            if (!decimal.TryParse(txtMonto.Text, out monto))
+            {
+                MessageBox.Show("El campo monto solo debe contener números.");
+                return false;
+            }
+
+            return true; // Retorna verdadero si todos los campos obligatorios están llenos y el campo monto contiene solo números
+        }
+
+
 
         private void CalcularTotal()
         {
@@ -214,6 +250,39 @@ namespace Pixel_Program
         {
             // Se ha soltado el botón del mouse, por lo que el formulario ya no se moverá
             mousePresionado = false;
+        }
+
+        private void btnVolverAtras_Click(object sender, EventArgs e)
+        {
+            FrmPrincipal formularioPrincipal = new FrmPrincipal();
+            formularioPrincipal.Show();
+            Hide();
+        }
+
+        private void btnMinimizar_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void FrmGastos_Validating(object sender, CancelEventArgs e)
+        {
+           
+        }
+
+        private void txtMonto_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            // Verifica si la tecla presionada es un dígito, el punto decimal o la tecla de retroceso (backspace)
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
+            {
+                // Si no es un dígito, el punto decimal o la tecla de retroceso, se marca el evento como manejado
+                e.Handled = true;
+            }
+
+            // Permite solo un punto decimal
+            if ((e.KeyChar == '.') && ((sender as TextBox).Text.IndexOf('.') > -1))
+            {
+                e.Handled = true;
+            }
         }
     }
 }

@@ -28,6 +28,8 @@ namespace Pixel_Program
             dataGridViewIngresos.Columns.Add("DescripcionColumn", "Descripción");
             dataGridViewIngresos.Columns.Add("MontoColumn", "Monto");
             dataGridViewIngresos.Columns.Add("FechaColumn", "Fecha");
+            dataGridViewIngresos.Columns.Add("ClienteColumn", "Cliente");
+
 
             // Llama al método para cargar los gastos al cargar el formulario
             CargarIngresos();
@@ -36,18 +38,30 @@ namespace Pixel_Program
 
         private void btnIngresar_Click(object sender, EventArgs e)
         {
-            // Obtener los valores de los controles de entrada (TextBox, DateTimePicker, etc.)
-            string descripcion = txtDescripcion.Text;
-            decimal monto = Convert.ToDecimal(txtMonto.Text);
-            DateTime fecha = DateTime.Now; // Puedes obtener la fecha actual o usar un control de fecha en tu formulario
+            // Verifica que todos los campos obligatorios no estén vacíos
+            if (string.IsNullOrWhiteSpace(txtDescripcion.Text) ||
+                string.IsNullOrWhiteSpace(txtMonto.Text) ||
+                string.IsNullOrWhiteSpace(txtNombreCliente.Text))
+            {
+                MessageBox.Show("Por favor, complete todos los campos obligatorios.");
+                return;
+            }
+
+            // Verifica que el monto sea un valor numérico
+            if (!decimal.TryParse(txtMonto.Text, out decimal monto))
+            {
+                MessageBox.Show("El monto ingresado no es válido.");
+                return;
+            }
+
+            // Obtener la fecha actual
+            DateTime fecha = DateTime.Now;
 
             // Insertar el ingreso en la base de datos
-            gestionBaseDatos.InsertarIngreso(descripcion, monto, fecha);
+            gestionBaseDatos.InsertarIngreso(txtDescripcion.Text, monto, fecha, txtNombreCliente.Text);
 
             // Recargar los ingresos en el DataGridView después de insertar uno nuevo
             CargarIngresos();
-
-            // Limpiar los controles de entrada después de ingresar el nuevo ingreso
 
             MessageBox.Show("Ingreso registrado correctamente.");
         }
@@ -85,7 +99,7 @@ namespace Pixel_Program
             {
                 gestionBaseDatos.AbrirConexion();
 
-                string consulta = "SELECT id, descripcion, monto, fecha FROM ingresos";
+                string consulta = "SELECT id, descripcion, monto, fecha, cliente FROM ingresos";
                 MySqlCommand comando = new MySqlCommand(consulta, gestionBaseDatos.conexion);
                 MySqlDataReader reader = comando.ExecuteReader();
 
@@ -97,8 +111,10 @@ namespace Pixel_Program
                     string descripcion = reader.GetString(1);
                     decimal monto = reader.GetDecimal(2);
                     DateTime fecha = reader.GetDateTime(3);
+                    string cliente = reader.GetString(4);
 
-                    dataGridViewIngresos.Rows.Add(idIngreso, descripcion, monto, fecha);
+
+                    dataGridViewIngresos.Rows.Add(idIngreso, descripcion, monto, fecha, cliente);
                 }
 
                 reader.Close();
@@ -143,9 +159,11 @@ namespace Pixel_Program
                 string nuevaDescripcion = txtDescripcion.Text;
                 decimal nuevoMonto = Convert.ToDecimal(txtMonto.Text);
                 DateTime nuevaFecha = DateTime.Now; // Puedes obtener la fecha actual o usar un control de fecha en tu formulario
+                string nuevoCliente = txtNombreCliente.Text;
+
 
                 // Actualizar el ingreso en la base de datos
-                gestionBaseDatos.ActualizarIngreso(idIngreso, nuevaDescripcion, nuevoMonto, nuevaFecha);
+                gestionBaseDatos.ActualizarIngreso(idIngreso, nuevaDescripcion, nuevoMonto, nuevaFecha, nuevoCliente);
 
                 // Recargar los ingresos en el DataGridView después de actualizar uno
                 CargarIngresos();
@@ -208,6 +226,34 @@ namespace Pixel_Program
             }
 
 
+        }
+
+        private void btnVolverAtras_Click(object sender, EventArgs e)
+        {
+            FrmPrincipal formularioPrincipal = new FrmPrincipal();
+            formularioPrincipal.Show();
+            Hide();
+        }
+
+        private void btnMinimizar_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void txtMonto_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            // Verifica si la tecla presionada es un dígito, el punto decimal o la tecla de retroceso (backspace)
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
+            {
+                // Si no es un dígito, el punto decimal o la tecla de retroceso, se marca el evento como manejado
+                e.Handled = true;
+            }
+
+            // Permite solo un punto decimal
+            if ((e.KeyChar == '.') && ((sender as TextBox).Text.IndexOf('.') > -1))
+            {
+                e.Handled = true;
+            }
         }
     }
 }
